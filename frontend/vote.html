@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Welcome to Voting Page</h2>
+    <div id="candidates"></div>
+    
+    <script>
+        // Replace with the token you got from login
+        const token = localStorage.getItem('token');
+
+        // Fetch candidates
+        fetch('http://localhost:5000/api/vote/', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'x-auth-token': token
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            const candidateContainer = document.getElementById('candidates');
+            data.forEach(candidate => {
+                candidateContainer.innerHTML += `
+                    <div>
+                        <h3>${candidate.name} - ${candidate.party}</h3>
+                        <button onclick="voteForCandidate('${candidate._id}')">Vote</button>
+                    </div>
+                `;
+            });
+        })
+        .catch(err => console.error('Error fetching candidates:', err));
+
+        // Vote function
+        function voteForCandidate(candidateId) {
+            fetch('http://localhost:5000/api/vote/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-auth-token': token
+                },
+                body: JSON.stringify({ candidateId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.msg);
+            })
+            .catch(err => console.error('Error voting for candidate:', err));
+        }
+    </script>
+    <button onclick="loggingOut()">Logout</button>
+    <script>
+        function loggingOut(){
+            window.location.href = 'index.html'
+        }
+    </script>
+</body>
+</html>

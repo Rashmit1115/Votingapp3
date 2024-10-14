@@ -1,0 +1,302 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-page layout setup */
+body {
+    font-family: 'Poppins', sans-serif; /* Clean and modern font */
+    background-color: #f0f2f5; /* Soft background color */
+    color: #333;
+    line-height: 1.6;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container styling for the login form */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out; /* Smooth entrance animation */
+}
+
+/* Fade-in effect for the container */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for headings */
+h1 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Styling for form and inputs */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Input fields styling */
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f7f7f7;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* Soft glowing effect on focus */
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px; /* Reduced padding */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px; /* Soft corners */
+    cursor: pointer;
+    font-size: 1rem; /* Balanced font size */
+    font-weight: 500; /* Medium font weight */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+    background-color: #004494;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+    .container {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Auth forms container */
+#auth-forms {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-bottom: 20px; /* Added margin-bottom for spacing */
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Form input styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #333;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Admin button styling */
+button[onclick="goToAdmin()"] {
+    width: 300px;
+    background-color: #0275d8;
+    margin-bottom: 10px; /* Added margin for better spacing */
+    border-radius: 5px;
+}
+
+button[onclick="goToAdmin()"]:hover {
+    background-color: #025aa5;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #auth-forms,
+    button[onclick="goToAdmin()"] {
+        width: 90%;
+    }
+}
+
+/* Back to login button */
+#back-to-login {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #0275d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#back-to-login:hover {
+    background-color: #025aa5;
+}
+
+/* Reset some default styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+h2 {
+    margin: 20px 0; /* Margin around the heading */
+}
+
+#candidates {
+    width: 80%; /* Width of the candidate container */
+    max-width: 600px; /* Maximum width */
+    margin: 20px 0; /* Margin for spacing */
+    padding: 20px; /* Padding for better layout */
+    background: white; /* White background for candidates section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+div {
+    margin-bottom: 20px; /* Space between candidates */
+    padding: 10px; /* Padding around candidate info */
+    border-bottom: 1px solid #ccc; /* Separator line */
+}
+
+h3 {
+    margin: 0; /* Remove margin for heading inside candidates */
+}
+
+button {
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 5px; /* Rounded button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+button:active {
+    background-color: #004085; /* Even darker on active */
+}
+
+/* Logout button specific styles */
+#logout-btn {
+    margin-top: 20px; /* Space above logout button */
+    background-color: #dc3545; /* Bootstrap danger color */
+}
+
+#logout-btn:hover {
+    background-color: #c82333; /* Darker shade on hover */
+}

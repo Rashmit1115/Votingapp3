@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Online Voting App</h1>
+
+    <div id="auth-forms">
+        <h2>Register</h2>
+        <form id="register-form">
+            <input type="text" id="reg-name" placeholder="Name" required>
+            <input type="email" id="reg-email" placeholder="Email" required>
+            <input type="password" id="reg-password" placeholder="Password" required>
+            <button type="submit" id="register-btn">Register</button>
+        </form>
+
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="voting-section" style="display:none;">
+        <h2>Vote for Your Candidate</h2>
+        <div id="candidates"></div>
+        <button id="vote-button">Vote</button>
+    </div>
+
+    <script src="script.js"></script>
+    <button onclick="goToAdmin()">Admin</button>
+    <script>
+        function goToAdmin(){
+            window.location.href = 'admin2.html'
+        }
+    </script>
+</body>
+</html>
